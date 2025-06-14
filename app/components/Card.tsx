@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
-import React, { useContext } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import { ThemeContext } from "@/store/ThemeContext";
+import { useTheme } from "@/store/ThemeContext";
 
 export interface SingleCard {
   id: number;
@@ -28,8 +28,7 @@ const Cards = ({ cards }: CardsProps) => {
     },
   };
 
-  const themeContext = useContext(ThemeContext);
-  const { theme } = themeContext;
+  const { theme } = useTheme();
   return (
     <main>
       <div

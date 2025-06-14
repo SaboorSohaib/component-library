@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useContext } from "react";
-import { ThemeContext } from "../../store/ThemeContext";
+import { ThemeContext, useTheme } from "../../store/ThemeContext";
 import DirectionToggle from "./DirectionToggle";
 
 export const Header = () => {
@@ -11,7 +11,7 @@ export const Header = () => {
     throw new Error("Header must be used within a ThemeProvider");
   }
 
-  const { theme, toggleTheme } = themeContext;
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <header

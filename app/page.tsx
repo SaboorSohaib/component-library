@@ -1,8 +1,7 @@
 "use client";
-import { useContext } from "react";
 import Cards, { SingleCard } from "./components/Card";
 import Hero from "./components/Hero";
-import { ThemeContext } from "@/store/ThemeContext";
+import { useTheme } from "@/store/ThemeContext";
 
 export default function Home() {
   const cards: SingleCard[] = [
@@ -55,8 +54,8 @@ export default function Home() {
       buttonText: "View",
     },
   ];
-  const themeContext = useContext(ThemeContext);
-  const { theme } = themeContext;
+
+  const { theme } = useTheme();
   return (
     <div
       className={`${

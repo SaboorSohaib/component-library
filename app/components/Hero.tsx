@@ -1,7 +1,7 @@
 "use client";
-import React, { useContext } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import { ThemeContext } from "@/store/ThemeContext";
+import { useTheme } from "@/store/ThemeContext";
 
 const Hero = () => {
   const fadeUpVariant = {
@@ -14,8 +14,7 @@ const Hero = () => {
       },
     },
   };
-  const themeContext = useContext(ThemeContext);
-  const { theme } = themeContext;
+  const { theme } = useTheme();
   return (
     <div className="overflow-hidden p-4">
       <motion.div

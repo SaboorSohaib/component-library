@@ -2,7 +2,6 @@ import { useLayoutDirection } from "@/store/LayoutDirectionContext";
 
 const DirectionToggle = () => {
   const { direction, toggleDirection } = useLayoutDirection();
-  console.log("🚀 ~ DirectionToggle ~ direction:", direction);
 
   return (
     <button
